@@ -3,6 +3,7 @@
 from lib.user import User
 
 import random
+import ipdb
 
 class Teacher(User):
 
@@ -16,3 +17,7 @@ class Teacher(User):
         "pipenv shell",
         "pytest -x flag to fail fast",
     ]    
+
+    def teach(self):
+        i = random.randrange(len(self.KNOWLEDGE))
+        return self.KNOWLEDGE[i]
